@@ -12,11 +12,6 @@ const tipo = ref('')
 function verificar(institucion) {
     return institucion === 'OTRA' ? 'B' : 'B1';
 }
-
-
-
-
-
 </script>
 
 <template>
@@ -94,6 +89,7 @@ function verificar(institucion) {
             </div>
         </div>
     </div>
+
     <div class="casos" v-if="mostrar === 'B'">
         <div class="card ">
             <div class="card-body">
@@ -131,6 +127,7 @@ function verificar(institucion) {
             </div>
         </div>
     </div>
+
     <div class="casos" v-if="mostrar === 'B1'">
         <div class="card ">
             <div class="card-body">
@@ -181,7 +178,6 @@ function verificar(institucion) {
                         <button
                             @click="() => { tipo === 'Si' ? (pRelativa++, pAnticom++) : (pAnticom--); mostrar = 'D' }"
                             class="btn btn-primary">
-                            <p v-if="tipo == 'SI'"></p>SIGUIENTE
                         </button>
                     </div>
                 </div>
@@ -217,7 +213,7 @@ function verificar(institucion) {
                     <div class="btn-group me-2" role="group" aria-label="Second group">
                         <button @click="() => { tipo === 'Si' ? (pAnticom--) : (repuesto--); mostrar = 'E' }"
                             class="btn btn-primary">
-                            <p v-if="tipo == 'SI'"></p>SIGUIENTE
+
                         </button>
                     </div>
                 </div>
@@ -370,6 +366,7 @@ function verificar(institucion) {
         </div>
     </div>
 </div>
+
 <div class="casos" v-if="mostrar === 'I'">
     {{'pAbsoluta  '+ pAbsoluta }}
     {{ 'pRelativa  '+pRelativa }}
