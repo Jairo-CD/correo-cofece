@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import denunciareporte from './views/denunciareporte.vue'
+
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import denunciareporte from './views/denunciareporte.vue'
       <a class="navbar-link" >IDIOMA</a>
     </nav>
     <div class="searchbar">
-      <form class="row">
+      <!--<form class="row">
         <div class="col">
           <label class="col col-form-label" style="color: white;">¿Qué estás buscando?</label>
         </div>
@@ -28,15 +28,15 @@ import denunciareporte from './views/denunciareporte.vue'
         <div class="col-auto">
           <button type="submit" class="btn btn-primary mb-3">Buscar</button>
         </div>
-      </form>
+      </form>-->
     </div>
   </header>
-  <main>
+  <main class="main">
     <h1 style="text-align: center;font-size: 30px; padding-top: 20px; color: #45545e;">Denuncia o Reporte de Practicas Anticompetitivas</h1>
     <router-view></router-view>
   </main>
   <footer>
-
+    <div class="footer"></div>
   </footer>
 </template>
 
@@ -60,6 +60,14 @@ import denunciareporte from './views/denunciareporte.vue'
   padding-right: 15px;
 }
 
+.footer{
+  background-color: #303e47;
+  width: 100%;
+  height: 10vh;
+  bottom: 0%;
+  position: absolute;
+}
+
 .searchbar {
   background-color: #00a099;
   width: 100%;
@@ -68,5 +76,9 @@ import denunciareporte from './views/denunciareporte.vue'
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+}
+.main{
+  width: 100%;
+  height: auto;
 }
 </style>
