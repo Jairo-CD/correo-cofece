@@ -23,8 +23,20 @@ export default {
         },
     },
     methods: {
-        next(){
+        back(){
             this.state = this.dataArr;
+
+            if(this.state.mostrar === 'B'){
+                this.$router.push("denuncia");
+
+                this.$emit("getPrev", this.state);
+            }else{
+                this.$emit("getPrev", this.state);
+            }
+        },
+        next(){
+            this.state = JSON.parse(JSON.stringify(this.dataArr));
+            this.state.prevState = JSON.parse(JSON.stringify(this.dataArr));
             this.state.mostrar = this.nextQuest;
 
             if(this.tipo === 'Si'){
@@ -43,6 +55,8 @@ export default {
                 if(this.toAdd.includes('pPoderSus')){
                     this.state.pPoderSus += (1*this.sigOp);
                 }
+
+                this.$emit("getValues", this.state);
             }else if(this.tipo === 'No'){
                 if(this.toSubs.includes('pAnticom')){
                     this.state.pAnticom--
@@ -59,11 +73,13 @@ export default {
                 if(this.toSubs.includes('pPoderSus')){
                     this.state.pPoderSus--
                 }
+
+                this.$emit("getValues", this.state);
             }else{
+                this.$emit("getValues", this.dataArr);
+
                 return(alert('¡Seleccione una opción!'));
             }
-
-            this.$emit("getValues", this.state);
         }
     },
     data() {
@@ -75,7 +91,8 @@ export default {
                 pIlicita: 0,
                 pAnticom: 0,
                 pPoderSus: 0,
-                mostrar: 'A'
+                mostrar: 'A',
+                prevState:{}
             },
             tipo: ''
         };
@@ -86,11 +103,11 @@ export default {
 </script>
 
 <template>
-    <div class="card ">
-        <div class="card-body">
+    <div class="card row m-2">
+        <div class="card-body p-4 col-12">
             <h5 class="card-title">{{ title }}</h5>
 
-            <div class="p">
+            <div class="p mt-3">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Si"
                         v-model="this.tipo">
@@ -99,7 +116,7 @@ export default {
                     </label>
                 </div>
 
-                <div class="form-check">
+                <div class="form-check mt-2">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="No"
                         v-model="this.tipo">
                     <label class="form-check-label" for="flexRadioDefault1">
@@ -108,9 +125,9 @@ export default {
                 </div>
             </div>
 
-            <div class="gbtn">
+            <div class="gbtn mt-4 text-center">
                 <div class="btn-group me-2" role="group" aria-label="First group">
-                    <button class="btn btn-primary">ANTERIOR</button>
+                    <button @click="back" class="btn btn-primary">ANTERIOR</button>
                 </div>
                 <div class="btn-group me-2" role="group" aria-label="Second group">
                     <button @click="next" class="btn btn-primary">
