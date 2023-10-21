@@ -32,7 +32,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
   <main class="main">
-    <h1 style="text-align: center;font-size: 30px; padding-top: 20px; color: #45545e;">Denuncia o Reporte de Practicas Anticompetitivas</h1>
+    <h1 style="text-align: center;font-size: 30px; padding-top: 20px; margin-bottom: 20px; color: #45545e;">Denuncia o Reporte de Practicas Anticompetitivas</h1>
     <router-view></router-view>
   </main>
   <footer>
@@ -64,7 +64,6 @@ import { RouterLink, RouterView } from 'vue-router'
   background-color: #303e47;
   width: 100%;
   height: 10vh;
-  bottom: 0%;
   position: absolute;
 }
 
@@ -80,5 +79,6 @@ import { RouterLink, RouterView } from 'vue-router'
 .main{
   width: 100%;
   height: auto;
+  margin-bottom: 20px;
 }
 </style>
