@@ -36,7 +36,6 @@ import { RouterLink, RouterView } from 'vue-router'
     <router-view></router-view>
   </main>
   <footer>
-    <div class="footer"></div>
   </footer>
 </template>
 
@@ -58,13 +57,6 @@ import { RouterLink, RouterView } from 'vue-router'
   color: #45545e;
   font-size: 15px;
   padding-right: 15px;
-}
-
-.footer{
-  background-color: #303e47;
-  width: 100%;
-  height: 10vh;
-  position: absolute;
 }
 
 .searchbar {

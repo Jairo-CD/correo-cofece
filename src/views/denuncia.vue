@@ -58,7 +58,7 @@ export default {
         return {
             state: {
                 repuesto: 0,
-                pAbsoluta: 9,
+                pAbsoluta: 0,
                 pRelativa: 0,
                 pIlicita: 0,
                 pAnticom: 0,
