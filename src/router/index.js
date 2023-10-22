@@ -7,9 +7,6 @@ import practica from '../views/practica.vue'
 import HomeView from '../views/presentacion.vue'
 import reporte from '../views/reporte.vue'
 
-
-
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
