@@ -9,30 +9,30 @@ export default {
             if(obj.mostrar === 'L' && obj.pAnticom < 3){
                 console.log('No es anticompetitiva');
 
-                this.$router.push("/");
+                this.$router.push("/noAntiComp");
             }
             if(obj.mostrar === 'N' && obj.pPoderSus === 2){
-                console.log('Es relativa');
+                console.log('Es relativa n');
 
-                this.$router.push("/");
+                this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
             }
             if(obj.mostrar === 'S'){
                 if(obj.pRelativa > obj.pAbsoluta){
-                    console.log('Es relativa');
+                    console.log('Es relativa s1');
 
-                    this.$router.push("/");
+                    this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
                 }else if(obj.pAbsoluta > obj.pRelativa){
-                    console.log('Es absoluta');
+                    console.log('Es absoluta s2');
 
-                    this.$router.push("/");
+                    this.$router.push({ name: 'practica', params: { titulo: "absolutas" } });
                 }else if(obj.pPoderSus > 0){
-                    console.log('Es relativa');
+                    console.log('Es relativa s3');
 
-                    this.$router.push("/");
+                    this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
                 }else{
-                    console.log('Es absoluta');
+                    console.log('Es absoluta s4');
 
-                    this.$router.push("/");
+                    this.$router.push({ name: 'practica', params: { titulo: "absolutas" } });
                 }
             }
 
@@ -47,7 +47,7 @@ export default {
             }else if(this.state.institucion === ''){
                 alert('!Seleccione una opción!');
             }else{
-                this.$router.push("/");
+                this.$router.push("/otraInstitucion");
             }
         }
     },
@@ -58,7 +58,7 @@ export default {
         return {
             state: {
                 repuesto: 0,
-                pAbsoluta: 0,
+                pAbsoluta: 9,
                 pRelativa: 0,
                 pIlicita: 0,
                 pAnticom: 0,
@@ -90,11 +90,11 @@ export default {
             </ol>
         </nav>
 
-        {{ this.state.pAbsoluta }}
-        {{ this.state.pRelativa }}
-        {{ this.state.pIlicita }}
-        {{ this.state.pAnticom }}
-        {{ this.state.pPoderSus }}
+        {{ 'absoluta'+this.state.pAbsoluta }}
+        {{ 'relativa'+this.state.pRelativa }}
+        {{ 'ilicita'+this.state.pIlicita }}
+        {{ 'anticomp'+this.state.pAnticom }}
+        {{ 'podersus'+this.state.pPoderSus }}   
         {{ this.state.mostrar }}
 
     </div>

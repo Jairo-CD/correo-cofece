@@ -56,6 +56,14 @@ export default {
                 }
             }
         };
+    },
+    created(){
+        this.updateTilte(this.$route.params.titulo)
+    },
+    methods: {
+        updateTilte(titulo){
+            this.titulo = titulo;
+        }
     }
 };
 </script>
@@ -69,6 +77,7 @@ export default {
             </ol>
         </nav>
     </div>
+
     <div class="container">
         <div class="card mx-auto w-75">
             <h5 class="card-header">Acerca de Prácticas monopóliticas {{titulo}}</h5>
