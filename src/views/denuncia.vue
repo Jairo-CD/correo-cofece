@@ -10,17 +10,17 @@ export default {
                 this.$router.push("/noAntiComp");
             }
             if(obj.mostrar === 'N' && obj.pPoderSus === 2){
-                this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
+                this.$router.push({ name: 'practica', params: { titulo: "relativa" } });
             }
             if(obj.mostrar === 'S'){
                 if(obj.pRelativa > obj.pAbsoluta){
-                    this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
+                    this.$router.push({ name: 'practica', params: { titulo: "relativa" } });
                 }else if(obj.pAbsoluta > obj.pRelativa){
-                    this.$router.push({ name: 'practica', params: { titulo: "absolutas" } });
+                    this.$router.push({ name: 'practica', params: { titulo: "absoluta" } });
                 }else if(obj.pPoderSus > 0){
-                    this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
+                    this.$router.push({ name: 'practica', params: { titulo: "relativa" } });
                 }else{
-                    this.$router.push({ name: 'practica', params: { titulo: "absolutas" } });
+                    this.$router.push({ name: 'practica', params: { titulo: "absoluta" } });
                 }
             }
 
