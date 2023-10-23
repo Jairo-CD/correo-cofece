@@ -187,45 +187,46 @@ export default {
                 </div>
             </div>
             <div class="col-4">
-                <div class="card mx-auto mb-3">
+                <div class="card mx-auto mb-4">
                     <h5 class="card-header">Denuncia Práctica monopólitica {{ titulo }}</h5>
                     <div class="card-body" style="text-align: justify;">
                         <p class="card-text">Cualquier persona podrá presentar una denuncia por, ante la Autoridad
                             Investigadora, estas no podrán ser anónimas.</p>
-                        <ul>
-                            <li>Prácticas monopólicas absolutas</li>
-                            <li>Prácticas monopólicas relativas</li>
-                            <li>Concentraciones ilícitas</li>
-                        </ul>
                         <p class="card-text " style="font-weight: bold;">El escrito de denuncia debe cumplir con todos
-                            los
-                            requisitos previstos en el artículo 68 de la LFCE para ser admitida.</p>
+                            los requisitos previstos en el artículo 68 de la LFCE y mostrados en la tabla para ser admitida.</p>
+                        <p class="card-text">
+                            La presentación de una denuncia puede realizarse de manera electrónica a través del correo electrónico
+                            <a href="mailto:denuncias@cofece.mx">denuncias@cofece.mx</a>
+                            o en la Oficialía de Partes Electrónica, así como en físico en la Oficialía de Partes de la Comisión.
+                        </p>
 
                     </div>
                     <div class="btn">
-                        <router-link :to="{ name: 'denuncia' }"><button
-                                class="btn" style="background-color: #51d1bd; color: white;">DENUNCIA</button></router-link>
+                        <a href="https://www.cofece.mx/autoridad-investigadora/denuncia-o-reporta-practicas-anticompetitivas/presenta-una-denuncia-formal/">
+                            <button class="btn" style="background-color: #51d1bd; color: white;">DENUNCIA</button>
+                        </a>
                     </div>
                 </div>
                 <div class="card mx-auto">
                     <h5 class="card-header">Reporte Práctica monopólitica {{ titulo }}</h5>
                     <div class="card-body" style="text-align: justify;">
                         <p class="card-text">Cualquier persona puede reportar ante la COFECE y de manera anónima (si así
-                        lo
-                        desea), segura y confidencial, hechos de los que tenga conocimiento y considere que
-                        constituyen
-                        alguna de las siguientes prácticas anticompetitivas.</p>
-                    <ul>
-                        <li>Prácticas monopólicas absolutas</li>
-                        <li>Prácticas monopólicas relativas</li>
-                        <li>Concentraciones ilícitas</li>
-                    </ul>
-                    <p class="card-text">Los reportes, a diferencia de las denuncias, no tienen que cumplir con
-                        ningún
-                        requisito específico para su presentación.</p>
-                </div>
-                <div class="btn ">
-                    <router-link :to="{ name: 'reporte' }"><button class="btn" style="background-color: #51d1bd; color: white;">REPORTE</button></router-link>
+                            lo desea), segura y confidencial, hechos de los que tenga conocimiento y considere que
+                            constituyen una práctica anticompetitiva.
+                        </p>
+                        <p class="card-text">Los reportes, a diferencia de las denuncias, no tienen que cumplir con
+                            ningún requisito específico para su presentación.
+                        </p>
+                        <p class="card-text">
+                            La presentación de este reporte es electrónica y no genera ninguna actuación formal por parte de la Autoridad Investigadora. Sin embargo, si la
+                            información proporcionada aporta elementos que indiquen la realización de conductas contrarias a la LFCE, la Autoridad Investigadora podrá iniciar
+                            una investigación de oficio.
+                        </p>
+                    </div>
+                    <div class="btn ">
+                        <a href="https://www.cofece.mx/autoridad-investigadora/denuncia-o-reporta-practicas-anticompetitivas/reporta-practicas-anticompetitivas/">
+                            <button class="btn" style="background-color: #51d1bd; color: white;">REPORTE</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -241,4 +242,5 @@ a {
 
 a:hover {
     color: #51d1bd;
-}</style>
+}
+</style>

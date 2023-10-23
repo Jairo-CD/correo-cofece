@@ -17,21 +17,9 @@ import { RouterLink, RouterView } from 'vue-router'
       <a class="navbar-link" >IDIOMA</a>
     </nav>
     <div class="searchbar">
-      <!--<form class="row">
-        <div class="col">
-          <label class="col col-form-label" style="color: white;">¿Qué estás buscando?</label>
-        </div>
-        <div class="col-auto">
-          <label class="visually-hidden">Busqueda</label>
-          <input type="password" class="form-control"  placeholder="Busqueda">
-        </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">Buscar</button>
-        </div>
-      </form>-->
     </div>
   </header>
-  <main class="main">
+  <main class="main p-4">
     <h1 style="text-align: center;font-size: 30px; padding-top: 20px; margin-bottom: 20px; color: #45545e;">Denuncia o Reporte de Practicas Anticompetitivas</h1>
     <router-view></router-view>
   </main>

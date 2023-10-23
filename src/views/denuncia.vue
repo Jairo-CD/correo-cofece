@@ -7,31 +7,19 @@ export default {
     methods: {
         setValues(obj) {
             if(obj.mostrar === 'L' && obj.pAnticom < 3){
-                console.log('No es anticompetitiva');
-
                 this.$router.push("/noAntiComp");
             }
             if(obj.mostrar === 'N' && obj.pPoderSus === 2){
-                console.log('Es relativa n');
-
                 this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
             }
             if(obj.mostrar === 'S'){
                 if(obj.pRelativa > obj.pAbsoluta){
-                    console.log('Es relativa s1');
-
                     this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
                 }else if(obj.pAbsoluta > obj.pRelativa){
-                    console.log('Es absoluta s2');
-
                     this.$router.push({ name: 'practica', params: { titulo: "absolutas" } });
                 }else if(obj.pPoderSus > 0){
-                    console.log('Es relativa s3');
-
                     this.$router.push({ name: 'practica', params: { titulo: "relativas" } });
                 }else{
-                    console.log('Es absoluta s4');
-
                     this.$router.push({ name: 'practica', params: { titulo: "absolutas" } });
                 }
             }
