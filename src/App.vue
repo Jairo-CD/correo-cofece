@@ -7,7 +7,10 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <img class="cofece-logo" src="./assets/Cofece-3010-2-logo1000px.png" alt="COFECE-Logo" />
     <nav class="navbar justify-content-center">
-      <a class="navbar-link" >HOME</a>
+      <router-link :to="{ name: 'home' }">
+        <a class="navbar-link" >HOME</a>
+      </router-link>
+
       <a class="navbar-link" >SOBRE LA COFECE</a>
       <a class="navbar-link" >BUSQUEDA DE INFORMACION</a>
       <a class="navbar-link" >PUBLICACIONES</a>
@@ -19,7 +22,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="searchbar">
     </div>
   </header>
-  <main class="main p-4">
+  <main class="main">
     <h1 style="text-align: center;font-size: 30px; padding-top: 20px; margin-bottom: 20px; color: #45545e;">Denuncia o Reporte de Practicas Anticompetitivas</h1>
     <router-view></router-view>
   </main>

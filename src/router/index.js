@@ -4,17 +4,20 @@ import denunciaReporte from '../views/denunciareporte.vue'
 import noAntiComp from '../views/noAntiComp.vue'
 import otraInstitucion from '../views/otraInstitucion.vue'
 import practica from '../views/practica.vue'
-import HomeView from '../views/presentacion.vue'
+import presentacion from '../views/presentacion.vue'
 import reporte from '../views/reporte.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+const routes = [
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: presentacion
     },
+    {
+      path: '/:catchAll(.*)*',
+      name: "PageNotFound",
+      component: presentacion,
+     },
     {
       path: '/denuncia',
       name: 'denuncia',
@@ -47,6 +50,10 @@ const router = createRouter({
       component: otraInstitucion
     }
   ]
-})
+
+  const router = createRouter({
+    history: createWebHistory(),
+    routes
+  })
 
 export default router
