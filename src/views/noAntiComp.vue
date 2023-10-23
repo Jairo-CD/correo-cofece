@@ -6,9 +6,7 @@
     <div class="padre ">
         <h5 class="titulo">Lo sentimos mucho </h5>
         <p class="text">Parece que los hechos no muestran que exista una práctica anticompetitiva... </p>
-        <p class="text">Si requiere mas informacion puede consultar los siguientes docuemntos:</p>
-
-
+        <p class="text">Si requiere mas informacion puede consultar los siguientes documentos:</p>
 
         <div class="containe ralign-items-center">
             <div class="row justify-content-md-center">
@@ -40,13 +38,13 @@
                     <p class="text-start">
                         <a href="https://www.cofece.mx/wp-content/uploads/2017/12/guia-0012015_pmr.pdf">
                             <span class="material-icons" style="margin-right: 10px;">picture_as_pdf</span>
-                            El Procedimiento De Investigación Por Prácticas Monopólicas Relativas O Concentraciones Ilícitas
+                            El Procedimiento De Investigación Por Prácticas Monopólicas Relativas o Concentraciones Ilícitas
                         </a>
                     </p>
                 </div>
             </div>
         </div>
-        <router-link :to="{ name: 'home' }"><button class="btn btn-primary">Regresar</button></router-link>
+        <router-link :to="{ name: 'home' }"><button class="btn" style="background-color: #51d1bd; color: white;">Regresar</button></router-link>
     </div>
 </template>
 <style scoped >

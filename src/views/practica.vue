@@ -53,7 +53,7 @@ export default {
         <div class="row mx-auto" style="width: 80%;">
             <div class="col-8">
                 <div class="card mx-auto">
-                    <h5 class="card-header">Denuncia Práctica monopólitica {{ titulo }}</h5>
+                    <h5 class="card-header">Requisitos para denunciar una Práctica monopólitica {{ titulo }}</h5>
                     <div class="card-body">
                         <div class="card-text textJustify" style="text-align: justify;">
                             <p>La LFCE señala que cualquier persona, física o moral, podrá denunciar ante la Autoridad
@@ -187,65 +187,45 @@ export default {
                 </div>
             </div>
             <div class="col-4">
-                <div class="card mx-auto">
-                    <h5 class="card-header">Reporte Práctica monopólitica {{ titulo }}</h5>
-                    <div class="card-body">
-                        <p class="card-text" style="text-align: justify;">Cualquier persona puede reportar ante la COFECE y
-                            de manera anónima (si así lo desea),
-                            segura y confidencial, hechos de los que tenga conocimiento y considere que constituye una
-                            práctica monópolica {{ titulo }}.
-                            <br><br>
-                            Los reportes, a diferencia de las denuncias, no tienen que cumplir con ningún requisito
-                            específico para su presentación.
-                        </p>
+                <div class="card mx-auto mb-3">
+                    <h5 class="card-header">Denuncia Práctica monopólitica {{ titulo }}</h5>
+                    <div class="card-body" style="text-align: justify;">
+                        <p class="card-text">Cualquier persona podrá presentar una denuncia por, ante la Autoridad
+                            Investigadora, estas no podrán ser anónimas.</p>
+                        <ul>
+                            <li>Prácticas monopólicas absolutas</li>
+                            <li>Prácticas monopólicas relativas</li>
+                            <li>Concentraciones ilícitas</li>
+                        </ul>
+                        <p class="card-text " style="font-weight: bold;">El escrito de denuncia debe cumplir con todos
+                            los
+                            requisitos previstos en el artículo 68 de la LFCE para ser admitida.</p>
 
                     </div>
-                </div>
-                <div class="container mt-3">
-                    <div class="row text-center fs-2" >
-                        <a href="https://www.cofece.mx/autoridad-investigadora/denuncia-o-reporta-practicas-anticompetitivas/">Reporta o denuncia aqui</a>
+                    <div class="btn">
+                        <router-link :to="{ name: 'denuncia' }"><button
+                                class="btn" style="background-color: #51d1bd; color: white;">DENUNCIA</button></router-link>
                     </div>
-                    <div class="row justify-content-center mt-4 my-auto">
-                        <p style="font-size: large;">Para mas información puedes consultar uno de los siguientes enlaces:
-                        </p>
-                        <div class="col">
-                            <div class="row align-items-center p-1">
-                                <div class="col-2 d-flex justify-content-end">
-                                    <a href="https://www.cofece.mx/wp-content/uploads/2017/12/guia-0022015_inicio_investigaciones.pdf">
-                                        <span class="material-icons" style="margin-right: 10px;">picture_as_pdf</span>
-                                    </a>
-                                </div>
-                                <div class="col-10 d-flex justify-content-start">
-                                    <a href="https://www.cofece.mx/wp-content/uploads/2017/12/guia-0022015_inicio_investigaciones.pdf"
-                                    style="font-size: large;">
-                                        Guía para el inicio de investigaciones por prácticas monopólicas</a>
-                                </div>                            
-                            </div>
-                            <div class="row align-items-center p-1">
-                                <div class="col-2 d-flex justify-content-end">
-                                    <a :href="items[titulo].pdf">
-                                        <span class="material-icons" style="margin-right: 10px;">picture_as_pdf</span>
-                                    </a>
-                                </div>
-                                <div class="col-10 d-flex justify-content-start">
-                                    <a :href="items[titulo].pdf" style="font-size: large;">
-                                        Guía para tramitar el procedimiento de investigación de Prácticas monopólicas {{ titulo }}s
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row align-items-center p-1">
-                                <div class="col-2 d-flex justify-content-end">
-                                    <a :href="items[titulo].archivo">
-                                        <span class="material-icons" style="margin-right: 10px;">link</span>
-                                    </a>
-                                </div>
-                                <div class="col-10 d-flex justify-content-start">
-                                    <a :href="items[titulo].archivo" style="font-size: large;">
-                                        Archivos para Prácticas Monopólicas {{ titulo }}s
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="card mx-auto">
+                    <h5 class="card-header">Reporte Práctica monopólitica {{ titulo }}</h5>
+                    <div class="card-body" style="text-align: justify;">
+                        <p class="card-text">Cualquier persona puede reportar ante la COFECE y de manera anónima (si así
+                        lo
+                        desea), segura y confidencial, hechos de los que tenga conocimiento y considere que
+                        constituyen
+                        alguna de las siguientes prácticas anticompetitivas.</p>
+                    <ul>
+                        <li>Prácticas monopólicas absolutas</li>
+                        <li>Prácticas monopólicas relativas</li>
+                        <li>Concentraciones ilícitas</li>
+                    </ul>
+                    <p class="card-text">Los reportes, a diferencia de las denuncias, no tienen que cumplir con
+                        ningún
+                        requisito específico para su presentación.</p>
+                </div>
+                <div class="btn ">
+                    <router-link :to="{ name: 'reporte' }"><button class="btn" style="background-color: #51d1bd; color: white;">REPORTE</button></router-link>
                     </div>
                 </div>
             </div>

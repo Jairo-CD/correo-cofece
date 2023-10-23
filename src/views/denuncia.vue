@@ -89,57 +89,49 @@ export default {
                 <li class="breadcrumb-item"><router-link :to="{ name: 'denuncia' }">Denuncia</router-link></li>
             </ol>
         </nav>
-
-        {{ 'absoluta'+this.state.pAbsoluta }}
-        {{ 'relativa'+this.state.pRelativa }}
-        {{ 'ilicita'+this.state.pIlicita }}
-        {{ 'anticomp'+this.state.pAnticom }}
-        {{ 'podersus'+this.state.pPoderSus }}   
-        {{ this.state.mostrar }}
-
     </div>
 
     <div class="casos" v-if="this.state.mostrar === 'A'">
-        <div class="card ">
-            <div class="card-body">
+        <div class="card w-50">
+            <div class="card-body" style="text-align: justify;">
                 <h5 class="card-title">¿Cual de los siguientes casos descibre mejor tu situacion?</h5>
                 <div class="p">
-                    <div class="form-check">
+                    <div class="form-check my-2">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                             value="COFECE" v-model="this.state.institucion">
                         <label class="form-check-label" for="flexRadioDefault1">
-                            COFECE
+                            Denuncia las prácticas monopólicas, las concentraciones ilícitas o demás restricciones al funcionamiento eficiente en materia económica.
                         </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check my-2">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                             value="IFT" v-model="this.state.institucion">
                         <label class="form-check-label" for="flexRadioDefault1">
-                            IFT
+                            Señalar irregularidades en la prestación de servicios de telecomunicaciones y radiodifusión.
                         </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check my-2">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                             value="COFEPRIS" v-model="this.state.institucion">
                         <label class="form-check-label" for="flexRadioDefault1">
-                            COFEPRIS
+                            Reclamación en contra de algún proveedor por no respetar precios, cantidades, plazos, términos, entregas, condiciones y demás compromisos adquiridos al realizar una compra.
                         </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check my-2">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                             value="PROFECO" v-model="this.state.institucion">
                         <label class="form-check-label" for="flexRadioDefault1">
-                            PROFECO
+                            Denuncia por hechos, actos u omisiones que representen un riesgo o provoquen potencialmente un daño a la salud.
                         </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check my-2">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                             value="CONDUSEF" v-model="this.state.institucion">
                         <label class="form-check-label" for="flexRadioDefault1">
-                            CONDUSEF
+                            Presentar una queja por cualquier producto o servicio contratado con alguna institución financiera.
                         </label>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check my-2">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                             value="OTRA" v-model="this.state.institucion">
                         <label class="form-check-label" for="flexRadioDefault1">
@@ -147,13 +139,13 @@ export default {
                         </label>
                     </div>
                 </div>
-                <div class="gbtn">
+                <div class="gbtn text-center">
                     <div class="btn-group me-2" role="group" aria-label="First group">
                         <button @click="() => { this.$router.push('/'); }"
-                            class="btn btn-primary">ANTERIOR</button>
+                            class="btn" style="background-color: #51d1bd; color: white;">ANTERIOR</button>
                     </div>
                     <div class="btn-group me-2" role="group" aria-label="Second group">
-                        <button @click="() => {verificarInstitucion()}" class="btn btn-primary">SIGUIENTE</button>
+                        <button @click="() => {verificarInstitucion()}" class="btn" style="background-color: #51d1bd; color: white;">SIGUIENTE</button>
                     </div>
                 </div>
             </div>

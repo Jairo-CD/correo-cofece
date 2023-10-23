@@ -3,12 +3,12 @@
 </script>
 <template>
     <div class="cp  ">
-        <div class="container my-4">
+        <div class="container my-4 w-75">
             Bienvenidos a la sección de denuncias y reportes de la COFECE, antes de proceder con su reporte o denuncia le
             haremos un pequeño cuestionario con la finalidad de brindarle una ayuda personalizada al tratar su caso.
         </div>
         <div class="btnContinuar">
-            <router-link :to="{ name: 'denuncia' }"><button class="btn btn-primary">COMENZAR</button></router-link>
+            <router-link :to="{ name: 'denuncia' }"><button class="btn">COMENZAR</button></router-link>
         </div>
     </div>
 </template>
@@ -42,7 +42,7 @@
 
 .btn {
     margin: 25px;
-    background-color: #00a099;
+    background-color: #51d1bd;
     color: white;
     font-weight: bold;
     font-size: 30px;

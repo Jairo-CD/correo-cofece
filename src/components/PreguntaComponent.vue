@@ -25,11 +25,10 @@ export default {
     methods: {
         back(){
             this.state = this.dataArr;
-
             if(this.state.mostrar === 'B'){
                 this.$router.push("denuncia");
-
                 this.$emit("getPrev", this.state);
+                setTimeout(() => window.location.reload() , 100);
             }else{
                 this.$emit("getPrev", this.state);
             }
@@ -92,7 +91,15 @@ export default {
                 pAnticom: 0,
                 pPoderSus: 0,
                 mostrar: 'A',
-                prevState:{}
+                prevState:{
+                    repuesto: 0,
+                    pAbsoluta: 0,
+                    pRelativa: 0,
+                    pIlicita: 0,
+                    pAnticom: 0,
+                    pPoderSus: 0,
+                    mostrar: 'A'
+                }
             },
             tipo: ''
         };
@@ -127,10 +134,10 @@ export default {
 
             <div class="gbtn mt-4 text-center">
                 <div class="btn-group me-2" role="group" aria-label="First group">
-                    <button @click="back" class="btn btn-primary">ANTERIOR</button>
+                    <button @click="back" class="btn" style="background-color: #51d1bd; color: white;">ANTERIOR</button>
                 </div>
                 <div class="btn-group me-2" role="group" aria-label="Second group">
-                    <button @click="next" class="btn btn-primary">
+                    <button @click="next" class="btn" style="background-color: #51d1bd; color: white;">
                         SIGUIENTE
                     </button>
                 </div>
