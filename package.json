@@ -1,6 +1,7 @@
 {
   "name": "correo-cofece",
-  "version": "0.0.0",
+  "homepage": ".",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",

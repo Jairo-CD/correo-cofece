@@ -1,5 +1,7 @@
 <script>
-
+export default{
+    name: 'presentacion'
+}
 </script>
 <template>
     <div class="cp  ">
